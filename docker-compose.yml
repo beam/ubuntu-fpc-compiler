@@ -1,11 +1,21 @@
 version: "3.7"
 services:
-  ubuntu-fpc-compiler:
+  ubuntu-fpc-compiler-19.10:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.19.10
     image: ubuntu-fpc-compiler:19.10
     volumes:
       - type: bind
         source: ./source-code
         target: /source-code
+  ubuntu-fpc-compiler-20.04:
+    build:
+      context: .
+      dockerfile: Dockerfile.20.04
+    image: ubuntu-fpc-compiler:20.04
+    volumes:
+      - type: bind
+        source: ./source-code
+        target: /source-code
+      

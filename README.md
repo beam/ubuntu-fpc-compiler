@@ -12,8 +12,8 @@ ls source-code/Release
 
 ```
 git clone https://github.com/transmission-remote-gui/transgui.git source-code
-docker-compose build ubuntu-fpc-compiler
-docker-compose run ubuntu-fpc-compiler
+docker-compose build ubuntu-fpc-compiler-19.10
+docker-compose run ubuntu-fpc-compiler-19.10
 >> make clean && lazbuild -B transgui.lpi && make && make zipdist
 >> exit
 ls source-code/Release

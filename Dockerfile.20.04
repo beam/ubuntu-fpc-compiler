@@ -1,0 +1,10 @@
+FROM ubuntu:20.04
+RUN apt-get update
+RUN ln -s /usr/share/zoneinfo/Europe/London /etc/localtime
+RUN apt install -y \
+  build-essential \
+  lazarus-ide \
+  zip \
+&& rm -rf /var/lib/apt/lists/*
+WORKDIR /source-code
+CMD /bin/bash
